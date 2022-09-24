@@ -9,7 +9,6 @@ const DirectMessaging = () => {
     function implementingDirectChat(credentials){
         getOrCreateChat(
             credentials,
-            // function will only work if the app is a Direct Messaging one, hence setting 'is_direct_chat' to true and consequentially setting a list of usernames to search from.
             {is_direct_chat: true, usernames:[username]},
             () => setUsername('')
         )
@@ -39,18 +38,12 @@ const DirectMessaging = () => {
         <ChatEngine
             height='100vh'
             userName='Ibn'
-            // Accessing the stored environment variables in .env file
-            userSecret='123123'
+            userSecret='1234'
             projectID='21199fe9-1b86-44c2-bc61-81b6e84e3dcc'
             displayNewChatInterface={(credentials) => displayChatInterface(credentials)}
             />
 
-            // <ChatEngine
-// 			height='100vh'
-// 			userName='Ibn'
-// 			userSecret='123123'
-// 			projectID='21199fe9-1b86-44c2-bc61-81b6e84e3dcc'
-// 		/>
+
     )
 }
 
